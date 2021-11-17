@@ -10,24 +10,18 @@ export default class Node extends Component {
       isFinish,
       isStart,
       isWall,
-      isVisited,
-      isShortest,
       onMouseDown,
       onMouseEnter,
-      onMouseUp
+      onMouseUp,
     } = this.props;
 
-    const extraClassName = isStart
-      ? "node-start"
-      : isFinish
-        ? "node-finish"
+    const extraClassName = isFinish
+      ? 'node-finish'
+      : isStart
+        ? 'node-start'
         : isWall
-          ? "node-wall"
-          : isShortest
-            ? "node-shortest-path"
-            : isVisited
-              ? "node-visited"
-              : "";
+          ? 'node-wall'
+          : '';
 
     return (
       <div
