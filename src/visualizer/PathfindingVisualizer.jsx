@@ -20,22 +20,22 @@ export default class PathfindingVisualizer extends Component {
 
   componentDidMount() {
     const grid = getInitialGrid();
-    this.setState({grid});
+    this.setState({ grid });
   }
 
   handleMouseDown(row, col) {
     const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
-    this.setState({grid: newGrid, mouseIsPressed: true});
+    this.setState({ grid: newGrid, mouseIsPressed: true });
   }
 
   handleMouseEnter(row, col) {
     if (!this.state.mouseIsPressed) return;
     const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
-    this.setState({grid: newGrid});
+    this.setState({ grid: newGrid });
   }
 
   handleMouseUp() {
-    this.setState({mouseIsPressed: false});
+    this.setState({ mouseIsPressed: false });
   }
 
   animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
@@ -48,8 +48,16 @@ export default class PathfindingVisualizer extends Component {
       }
       setTimeout(() => {
         const node = visitedNodesInOrder[i];
-        document.getElementById(`node-${node.row}-${node.col}`).className =
-          'node node-visited';
+        if (node.row === START_NODE_ROW && node.col === START_NODE_COL) {
+          document.getElementById(`node-${START_NODE_ROW}-${START_NODE_COL}`)
+            .className = 'node node-start node-visited';
+        } else if (node.row === FINISH_NODE_ROW && node.col === FINISH_NODE_COL) {
+          document.getElementById(`node-${FINISH_NODE_ROW}-${FINISH_NODE_COL}`)
+            .className = 'node node-finish node-visited';
+        } else {
+          document.getElementById(`node-${node.row}-${node.col}`).className =
+            'node node-visited';
+        }
       }, 10 * i);
     }
   }
@@ -58,14 +66,22 @@ export default class PathfindingVisualizer extends Component {
     for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
       setTimeout(() => {
         const node = nodesInShortestPathOrder[i];
-        document.getElementById(`node-${node.row}-${node.col}`).className =
-          'node node-shortest-path';
+        if (node.row === START_NODE_ROW && node.col === START_NODE_COL) {
+          document.getElementById(`node-${START_NODE_ROW}-${START_NODE_COL}`)
+            .className = 'node node-start node-shortest-path';
+        } else if (node.row === FINISH_NODE_ROW && node.col === FINISH_NODE_COL) {
+          document.getElementById(`node-${FINISH_NODE_ROW}-${FINISH_NODE_COL}`)
+            .className = 'node node-finish node-shortest-path';
+        } else {
+          document.getElementById(`node-${node.row}-${node.col}`).className =
+            'node node-shortest-path';
+        }
       }, 50 * i);
     }
   }
 
   visualizeDijkstra() {
-    const {grid} = this.state;
+    const { grid } = this.state;
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
@@ -76,8 +92,8 @@ export default class PathfindingVisualizer extends Component {
   reset() {
     const grid = getInitialGrid();
 
-    for(let x = 0; x < grid.length; x++) {
-      for(let y = 0; y < grid[x].length; y++) {
+    for (let x = 0; x < grid.length; x++) {
+      for (let y = 0; y < grid[x].length; y++) {
         document.getElementById(`node-${x}-${y}`).className = 'node';
       }
     }
@@ -87,24 +103,24 @@ export default class PathfindingVisualizer extends Component {
   }
 
   render() {
-    const {grid, mouseIsPressed} = this.state;
+    const { grid, mouseIsPressed } = this.state;
 
     return (
       <>
-      <div className="navigation">
-        <button className="fill" onClick={() => this.visualizeDijkstra()}>
-          Visualize Dijkstra's Algorithm
-        </button>
-        <button className="fill" onClick={() => this.reset()}>
-          Reset
-        </button>
-      </div>
+        <div className="navigation">
+          <button className="fill" onClick={() => this.visualizeDijkstra()}>
+            Visualize Dijkstra's Algorithm
+          </button>
+          <button className="fill" onClick={() => this.reset()}>
+            Reset
+          </button>
+        </div>
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
               <div key={rowIdx}>
                 {row.map((node, nodeIdx) => {
-                  const {row, col, isFinish, isStart, isWall} = node;
+                  const { row, col, isFinish, isStart, isWall } = node;
                   return (
                     <Node
                       key={nodeIdx}
