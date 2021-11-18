@@ -35,7 +35,7 @@
 </p>
 
 
-**A web app to help visualizing typical graph searching algorithms**
+**A web app to help visualizing typical graph searching algorithms**. Inspired by @clementmihailescu ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project.
 
 ### Built With
 
