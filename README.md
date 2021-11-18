@@ -31,15 +31,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-  <a> <img src="lindenmayer-tree.png" alt="Demo"> </a>
+  <a> <img src="demo_1.gif" alt="Demo"> </a>
 </p>
 
 
-We want to implement a program that draws random graphics using a Lindenmayer or L-system. Among other things, we want to produce drawings that look like plants (possible application: landscape graphic output). The L-system was invented for this purpose: it allows to model the development of plant structures. It is a formal grammar that defines the generation of symbol strings on an alphabet. The symbols correspond to structural units of the plant (branches), and the resulting chain defines the structure to be drawn.
+**A web app to help visualizing typical graph searching algorithms**
 
 ### Built With
 
-* [JSON](https://github.com/stleary/JSON-java)
+* [React.js](https://fr.reactjs.org/)
 
 <!-- LICENSE -->
 ## License
@@ -51,19 +51,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Maël LE PETIT - [@Maelito_P](https://twitter.com/Maelito_P) - contact@maelito.fr
 
-Project Link: [https://github.com/MaelitoP/Lindenmayer](https://github.com/MaelitoP/Lindenmayer)
+Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://github.com/MaelitoP/pathfinding-visualizer/)
 
 
 
 <!-- REFERENCES -->
 ## References
-* [L-system](https://fr.wikipedia.org/wiki/L-Syst%C3%A8me)
-* [P. Prusinkiewicz & A. Lindenmayer - The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf)
-* [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)
+* [Clement Mihailescu](https://github.com/clementmihailescu) ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/MaelitoP/Lindenmayer/blob/main/LICENSE
+[license-url]: https://github.com/MaelitoP/pathfinding-visualizer/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/maelitop/
 [product-screenshot]: lindenmayer-tree.png
