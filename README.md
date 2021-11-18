@@ -16,7 +16,12 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#algo">Algorithms</a></li>
+        <li>
+          <a href="#algorithms">Algorithms</a>
+          <ul>
+            <li><a href="#dijkstra">Dijkstra's</a></li>
+          </ul>
+        </li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -30,12 +35,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+**A web app to help visualizing typical graph searching algorithms**
+
 <p align="center">
   <a> <img src="demo_1.gif" alt="Demo"> </a>
 </p>
 
+### Algorithms
 
-**A web app to help visualizing typical graph searching algorithms**
+#### Dijkstra
 
 ### Built With
 
@@ -57,7 +65,7 @@ Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://gith
 
 <!-- REFERENCES -->
 ## References
-* [Clement Mihailescu](https://github.com/clementmihailescu) ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project
+* [Clement Mihailescu](https://github.com/clementmihailescu) ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
