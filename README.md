@@ -57,7 +57,7 @@ Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://gith
 
 <!-- REFERENCES -->
 ## References
-* Clement Mihailescu ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project
+* [Clement Mihailescu](https://github.com/clementmihailescu) ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
