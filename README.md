@@ -45,6 +45,14 @@
 
 #### Dijkstra
 
+<p align="center">
+  <a> <img src="images/dijkstra.gif.gif" alt="Dijkstra"> </a>
+</p>
+
+Dijkstra's algorithm (or Dijkstra's Shortest Path First algorithm, SPF algorithm) is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later.
+
+The algorithm exists in many variants. Dijkstra's original algorithm found the shortest path between two given nodes,[5] but a more common variant fixes a single node as the "source" node and finds shortest paths from the source to all other nodes in the graph, producing a shortest-path tree. -Wikipedia
+
 ### Built With
 
 * [React.js](https://fr.reactjs.org/)
