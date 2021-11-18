@@ -63,7 +63,7 @@ Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://gith
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/MaelitoP/Lindenmayer/blob/main/LICENSE
+[license-url]: https://github.com/MaelitoP/pathfinding-visualizer/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/maelitop/
 [product-screenshot]: lindenmayer-tree.png
