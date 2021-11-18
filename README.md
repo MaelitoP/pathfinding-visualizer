@@ -35,7 +35,7 @@
 </p>
 
 
-**A web app to help visualizing typical graph searching algorithms**. Inspired by @clementmihailescu ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project.
+**A web app to help visualizing typical graph searching algorithms**
 
 ### Built With
 
@@ -57,9 +57,7 @@ Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://gith
 
 <!-- REFERENCES -->
 ## References
-* [L-system](https://fr.wikipedia.org/wiki/L-Syst%C3%A8me)
-* [P. Prusinkiewicz & A. Lindenmayer - The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf)
-* [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)
+* Clement Mihailescu ['Pathfinding Visualizer'](https://clementmihailescu.github.io/Pathfinding-Visualizer/) project
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
