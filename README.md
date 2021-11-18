@@ -35,11 +35,11 @@
 </p>
 
 
-We want to implement a program that draws random graphics using a Lindenmayer or L-system. Among other things, we want to produce drawings that look like plants (possible application: landscape graphic output). The L-system was invented for this purpose: it allows to model the development of plant structures. It is a formal grammar that defines the generation of symbol strings on an alphabet. The symbols correspond to structural units of the plant (branches), and the resulting chain defines the structure to be drawn.
+**A web app to help visualizing typical graph searching algorithms**
 
 ### Built With
 
-* [JSON](https://github.com/stleary/JSON-java)
+* [React.js](https://fr.reactjs.org/)
 
 <!-- LICENSE -->
 ## License
@@ -51,7 +51,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Maël LE PETIT - [@Maelito_P](https://twitter.com/Maelito_P) - contact@maelito.fr
 
-Project Link: [https://github.com/MaelitoP/Lindenmayer](https://github.com/MaelitoP/Lindenmayer)
+Project Link: [https://github.com/MaelitoP/pathfinding-visualizer/](https://github.com/MaelitoP/pathfinding-visualizer/)
 
 
 
