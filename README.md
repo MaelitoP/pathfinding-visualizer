@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-  <a> <img src="lindenmayer-tree.png" alt="Demo"> </a>
+  <a> <img src="demo_1.gif" alt="Demo"> </a>
 </p>
 
 
