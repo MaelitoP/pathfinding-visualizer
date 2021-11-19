@@ -7,9 +7,11 @@ import PathfindingVisualizer from './components/PathfindingVisualizer';
 
 function App() {
   if (isMobile) {
-    <div className="mobile">
-      <h3>The Pathfinding Visualizer app is unavailable on mobile.</h3>
-    </div>
+    return (
+      <div className="mobile">
+        <h3>The Pathfinding Visualizer app is unavailable on mobile.</h3>
+      </div>
+    )
   } else {
     return (
       <div className="App">
