@@ -18,7 +18,7 @@ export default class PathfindingVisualizer extends Component {
       changingFinish: false,
       locked: false
     };
-  }
+  } 
 
   componentDidMount() {
     const { START_NODE_ROW, START_NODE_COL, FINISH_NODE_ROW, FINISH_NODE_COL } = this.state;
