@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); // inter font
+
+:root {
+  // dark theme
+  --background: #151616;
+  --foreground: #242526;
+  --foreground-hover: #484a4d4f;
+  --foreground-accent: #484a4d;
+  --foreground-accent-hover: #444444;
+  --text-color: #dadce1;
+  --border: 1px solid #474a4d;
+
+  --form-item-height: 35px;
+
+  // tabs
+  --border-radius: 0.5em;
+
+  // grid item
+  --color-unvisited: #242526;
+  --color-visited: #656bff;
+  --color-intermediate: #00fbff;
+  --color-solution: #00ffbb;
+  --color-wall: #151616;
+  --color-source: #ff8c5f;
+  --color-target: #e85a7e;
+
+  --primary-color: #242424;
+  --secondary-color: #e6eef9;
+  --bigger-border-radius: 1.6em;
+  --smaller-border-radius: 1.2em;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

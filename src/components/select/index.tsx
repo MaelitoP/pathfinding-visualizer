@@ -1,0 +1,36 @@
+import React, { FC } from 'react'
+import styled from 'styled-components'
+
+import './../tooltip.scss'
+
+type SelectProps = {
+  defaultValue: string
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
+  options: [string, string][]
+}
+const Select: FC<SelectProps> = (props) => {
+  return (
+    <StyledSelect defaultValue={props.defaultValue} onChange={props.onChange}>
+      {props.options.map((opt) => (
+        <option key={opt[0]} value={opt[0]}>
+          {opt[1]}
+        </option>
+      ))}
+    </StyledSelect>
+  )
+}
+
+const StyledSelect = styled.select`
+  font-size: 14px;
+  margin-right: 10px;
+  height: var(--form-item-height);
+  width: fit-content;
+  padding: 0.35em 1.2em;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+
+  color: var(--text-color);
+  background-color: var(--foreground);
+`
+export default Select

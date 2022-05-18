@@ -1,0 +1,110 @@
+.container {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs {
+  height: inherit;
+  display: flex;
+  position: relative;
+  background-color: var(--foreground);
+  box-shadow: 0 0 1px 0 rgba(#ffffff, 0.1), 0 6px 12px 0 rgba(#ffffff, 0.1);
+  padding: 0.5rem;
+  border-radius: var(--bigger-border-radius);
+  border-color: var(--border);
+  * {
+    z-index: 2;
+  }
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 35px;
+  width: 110px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+input[type='radio'] {
+  &:checked {
+    & + label {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+input[id='180'] {
+  &:checked {
+    & ~ .glider {
+      transform: translateX(0);
+    }
+  }
+}
+
+input[id='100'] {
+  &:checked {
+    & ~ .glider {
+      transform: translateX(100%);
+    }
+  }
+}
+
+input[id='20'] {
+  &:checked {
+    & ~ .glider {
+      transform: translateX(200%);
+    }
+  }
+}
+
+input[id='square'] {
+  &:checked {
+    & ~ .glider {
+      transform: translateX(100%);
+    }
+  }
+}
+
+input[id='triangle'] {
+  &:checked {
+    & ~ .glider {
+      transform: translateX(0);
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: white;
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 35px;
+  width: 110px;
+  background-color: var(--foreground-accent);
+  z-index: 1;
+  border-radius: var(--smaller-border-radius);
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.85);
+  }
+}
