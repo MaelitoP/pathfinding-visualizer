@@ -7,13 +7,9 @@ import {
 import { Stack, Queue, BinaryHeap } from '../../data-structures'
 import { heuristics } from './heuristics'
 
-/**
- * estrutura de dados que dita a ordem de visitação dos nós durante a busca,
- * pode ter ou não acesso à informações específicas do problema (source, target)
- */
 export class Frontier {
   constructor(
-    private ds: TDataStructure<NodeFrontier> // ds: instância de uma DataStructure, pois ela precisa ser intância fora dessa classe, já que existem estruturas com construtores diferentes
+    private ds: TDataStructure<NodeFrontier> 
   ) {}
 
   add(item: NodeFrontier) {
@@ -42,18 +38,16 @@ export function getCreateFrontier(searchAlgo: SearchAlgoNames) {
     'breadth-first': ({}) => {
       return new Frontier(new Queue<NodeFrontier>())
     },
-    // TODO: testar
     'greedy-best-first': ({ target }) => {
-      if (!target) throw Error('target must be defined')
+      if (!target) throw Error('Target must be defined.')
 
       const h = heuristics['manhattan-distance']
       const f = (node: NodeFrontier) => h(node!.state, target)
 
       return new Frontier(new BinaryHeap<NodeFrontier>((a, b) => f(a) < f(b)))
     },
-    // TODO: testar
     'a-star': ({ target }) => {
-      if (!target) throw Error('target must be defined')
+      if (!target) throw Error('Target must be defined.')
 
       const h = heuristics['manhattan-distance']
       const f = (node: NodeFrontier) => node!.cost + h(node!.state, target)
