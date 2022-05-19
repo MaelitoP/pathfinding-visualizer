@@ -16,7 +16,7 @@ import {
 export function createSearcher(
   grid: GridTypeNames,
   algo: SearchAlgoNames,
-  gridItems: GridItemStatus[][] // o grid item que não for 'wall' é considerado comolivre pra visitar
+  gridItems: GridItemStatus[][]
 ) {
   const X = gridItems.length,
     Y = gridItems[0].length
@@ -33,9 +33,8 @@ export function createSearcher(
 }
 
 class Searcher {
-  // paremeter property: declara como propriedade da classe e já a inicializa com o valor recebido
   constructor(
-    private createFrontier: (info: FrontierParams) => TFrontier, // função que retorna uma instância de Frontier, pois ele precisa ser instanciado dentro do método this.solve()
+    private createFrontier: (info: FrontierParams) => TFrontier,
     private visited: TVisited,
     private neighbors: TNeighbors
   ) {}
@@ -47,7 +46,6 @@ class Searcher {
     return path.reverse()
   }
 
-  // retorna um array 2d arr, onde arr[l] é um array com todos os agentState visitados no nível l
   private aggregateByLevel(nodes: NodeFrontier[]) {
     const lastNode = nodes[nodes.length - 1]
     const len = lastNode ? lastNode.cost + 1 : 0
