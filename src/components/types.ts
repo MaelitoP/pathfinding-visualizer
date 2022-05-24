@@ -31,7 +31,7 @@ export type Action =
 /* others */
 
 export type UpdatesLinkedList = {
-  agentStates: AgentState[] // de um mesmo nível
-  newStatus: GridItemStatus // novo status dos agentStates
+  agentStates: AgentState[]
+  newStatus: GridItemStatus
   next: UpdatesLinkedList
 } | null
